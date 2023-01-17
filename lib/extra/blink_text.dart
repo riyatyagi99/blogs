@@ -48,6 +48,7 @@ class _BlinkTextState extends State<BlinkText> {
         ),
 
         const Text("trying some git features on IDE"),
+        const Text("trying some git features on IDE for branch 1"),
 
       ],
     ),
