@@ -7,7 +7,6 @@ final logger = (Type type) => Logger(
 
 class CustomerPrinter extends LogPrinter {
   final String className;
-
   CustomerPrinter(this.className);
 
   @override
