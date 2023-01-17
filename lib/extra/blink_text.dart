@@ -45,7 +45,10 @@ class _BlinkTextState extends State<BlinkText> {
           decoration: const InputDecoration(
             border: OutlineInputBorder()
           ),
-        )
+        ),
+
+        const Text("trying some git features on IDE"),
+
       ],
     ),
   );

@@ -49,8 +49,7 @@ class _CallbackFunState extends State<CallbackFun> {
           MyButtons(topic: "GetX", callbackFunction:callback),
           buildButton('DEBUG', Colors.blue, () => log.d('Debug message')),
           buildButton('INFO', Colors.blue, () => log.i('Info message')),
-          buildButton(
-              'WARNING', Colors.orange, () => log.w('Warning message')),
+          buildButton('WARNING', Colors.orange, () => log.w('Warning message')),
           buildButton('ERROR', Colors.red, () => log.e('Error message')),
           buildButton('WTF', Colors.red, () => log.wtf('Wtf message')),
         ],

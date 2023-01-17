@@ -40,6 +40,9 @@ dependencies:
   fvm: ^2.4.1
   flutter_html: ^2.1.2
   logger: ^1.1.0
+  connectivity_plus: ^3.0.2
+  internet_connection_checker: ^1.0.0+1
+  provider:
 
 dev_dependencies:
   flutter_test:
