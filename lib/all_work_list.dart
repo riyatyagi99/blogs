@@ -8,6 +8,8 @@ import 'extra/blink_text.dart';
 import 'extra/callback.dart';
 import 'extra/render_html.dart';
 import 'extra/search_with_tf.dart';
+import 'firebase/cloud_firestore_crud.dart';
+import 'firebase/remote_config.dart';
 
 class AllPackagesList extends StatefulWidget {
   AppConfig? appConfig;
@@ -120,6 +122,20 @@ class _AllPackagesListState extends State<AllPackagesList> {
               },
               style: style,
               child:const Text("CallBack",),
+            ),
+            ElevatedButton(
+              onPressed:(){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RemoteConfigDemo()));
+              },
+              style: style,
+              child:const Text("F/B - remote Config",),
+            ),
+            ElevatedButton(
+              onPressed:(){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FBStore()));
+              },
+              style: style,
+              child:const Text("F/B - cloud fireStore",),
             ),
 
           ],
