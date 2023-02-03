@@ -43,12 +43,16 @@ dependencies:
   connectivity_plus: ^3.0.2
   internet_connection_checker: ^1.0.0+1
   provider:
-  firebase_core: ^2.1.1
+  firebase_core: ^2.4.1
   firebase_remote_config: ^3.0.9
   cloud_firestore: ^4.3.1
   firebase_storage:
   image_picker:
   path:
+  video_player: ^2.5.1
+  url_launcher:
+  flutter_linkify:
+  firebase_performance:
 
 dev_dependencies:
   flutter_test:

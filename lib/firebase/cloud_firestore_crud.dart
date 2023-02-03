@@ -1,11 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:january_2023/firebase/user_data_model.dart';
 import 'dart:io';
-
 import 'package:path/path.dart';
 
 class FBStore extends StatefulWidget {
@@ -190,8 +188,8 @@ class _FBStoreState extends State<FBStore> {
                     .height / 2,
                 child: StreamBuilder<List<UserData>>(
                     stream: readData(),
-                    builder: (context,
-                        snapshot) { //(context, AsyncSnapshot<QuerySnapshot> streamSnapshot)
+
+                    builder: (context,  snapshot) { //(context, AsyncSnapshot<QuerySnapshot> streamSnapshot){
                       if (snapshot.hasData) {
                         final users = snapshot.data;
                         return users == null
@@ -237,7 +235,7 @@ class _FBStoreState extends State<FBStore> {
               color: Colors.black,
             ),
             child:ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(30)),
+              borderRadius: const BorderRadius.all(Radius.circular(30)),
               child: user.profilePicUrl!=null?Image.network(user.profilePicUrl ?? 'assets/images/dummyProfilePic.png',fit: BoxFit.fill,):
               Image.asset('assets/images/dummyProfilePic.png'),
             )

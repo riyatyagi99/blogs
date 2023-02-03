@@ -1,12 +1,30 @@
+import 'dart:io';
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:january_2023/extra/search_with_tf.dart';
 import 'all_work_list.dart';
 import 'app_config.dart';
 
+
+void main() async{
+  final prodAppConfig = AppConfig(
+    appName: "Prod Flavor",
+    flavor: "prod",
+    themeData: ThemeData(primarySwatch: Colors.deepOrange),
+  );
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+runWithAppConfig(prodAppConfig);
+ // runApp(MyApp());
+}
+
 void runWithAppConfig(AppConfig appConfig) {
   runApp(MyApp(
     appConfig: appConfig,
   ));
+
+
 
   // for device preview
 /*  runApp ( DevicePreview(

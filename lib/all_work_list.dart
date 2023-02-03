@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:html';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,8 +9,11 @@ import 'extra/blink_text.dart';
 import 'extra/callback.dart';
 import 'extra/render_html.dart';
 import 'extra/search_with_tf.dart';
+import 'extra/video_play.dart';
 import 'firebase/cloud_firestore_crud.dart';
+import 'firebase/my_post.dart';
 import 'firebase/remote_config.dart';
+import 'get_set_methods.dart';
 
 class AllPackagesList extends StatefulWidget {
   AppConfig? appConfig;
@@ -27,8 +31,17 @@ class _AllPackagesListState extends State<AllPackagesList> {
 
   @override
   void initState() {
-    getConnectivity();
     super.initState();
+    getConnectivity();
+    getSetMethods();
+
+  }
+
+  getSetMethods() {
+    var rectangle = Rectangle(12,6);
+    print(rectangle.area);
+    rectangle.center = Point(4,4);
+    print(rectangle.center);
   }
 
 
@@ -94,6 +107,7 @@ class _AllPackagesListState extends State<AllPackagesList> {
           children: [
             const SizedBox(height: 50,),
             Text('Flutter Demo Home Page ${widget.appConfig?.appName}'),
+            Text('Flutter Demo Home Page ${widget.appConfig?.appName}'),
             ElevatedButton(
               onPressed:(){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SearchPage()));
@@ -136,6 +150,20 @@ class _AllPackagesListState extends State<AllPackagesList> {
               },
               style: style,
               child:const Text("F/B - cloud fireStore",),
+            ),
+            ElevatedButton(
+              onPressed:(){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PostsPage()));
+              },
+              style: style,
+              child:const Text("F/B - cloud fireStore-nested",),
+            ),
+            ElevatedButton(
+              onPressed:(){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PlayingVideo()));
+              },
+              style: style,
+              child:const Text("Video Play",),
             ),
 
           ],
