@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:january_2023/app_life_cycle_manager.dart';
 import 'package:january_2023/extra/search_with_tf.dart';
 import 'all_work_list.dart';
 import 'app_config.dart';
@@ -42,21 +43,23 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+    return AppLifeCycleManager(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
 /*
-        useInheritedMediaQuery: true,             //these 3 below foe device preview
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
+          useInheritedMediaQuery: true,             //these 3 below foe device preview
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
 */
 
-        theme: appConfig?.themeData,
-      home: AllPackagesList(appConfig:appConfig)
+          theme: appConfig?.themeData,
+        home: AllPackagesList(appConfig:appConfig)
 
 
 
-      //MyHomePage(title: 'Flutter Demo Home Page ${appConfig?.appName}'),
+        //MyHomePage(title: 'Flutter Demo Home Page ${appConfig?.appName}'),
+      ),
     );
   }
 }

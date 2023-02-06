@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'dart:html';
+import 'dart:math';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

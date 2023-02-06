@@ -1,4 +1,4 @@
-import 'dart:html';
+import 'dart:math';
 
 class Rectangle {
   final int width, height;
