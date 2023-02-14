@@ -37,6 +37,8 @@ class _BlinkTextState extends State<BlinkText> {
         ),
          const SizedBox(height: 20,),
 
+
+
         const Text("Auto sizing effect"),
         TextField(
           minLines: 1,
@@ -46,9 +48,12 @@ class _BlinkTextState extends State<BlinkText> {
             border: OutlineInputBorder()
           ),
         ),
-
-        const Text("trying some git features on IDE"),
-        const Text("trying some git features on IDE for branch 1"),
+            Text(
+              "trying some git features on IDE",
+              style: TextStyle(
+                  color: Theme.of(context).textSelectionTheme.selectionColor, ),
+            ),
+            const Text("trying some git features on IDE for branch 1"),
 
       ],
     ),

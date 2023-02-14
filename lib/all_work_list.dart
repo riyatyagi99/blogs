@@ -4,7 +4,10 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:january_2023/theme/theme_provider.dart';
+import 'package:provider/provider.dart';
 import 'app_config.dart';
+import 'extra/audio_play.dart';
 import 'extra/blink_text.dart';
 import 'extra/callback.dart';
 import 'extra/render_html.dart';
@@ -64,8 +67,8 @@ class _AllPackagesListState extends State<AllPackagesList> {
 
   ButtonStyle style = ElevatedButton.styleFrom(
       padding:  const EdgeInsets.symmetric(horizontal: 50 ,vertical: 5),//horizontal: 20,vertical: 15
-      foregroundColor: Colors.red,
-      backgroundColor: Colors.black,
+      foregroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25.0))
   );
@@ -97,17 +100,32 @@ class _AllPackagesListState extends State<AllPackagesList> {
 
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
+    final themeChange = Provider.of<DarkThemeProvider>(context);
+
+    return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Column(
           //  mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: <Widget>[
             const SizedBox(height: 50,),
             Text('Flutter Demo Home Page ${widget.appConfig?.appName}'),
-            Text('Flutter Demo Home Page ${widget.appConfig?.appName}'),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+
+                Checkbox(
+                    value: themeChange.darkTheme,
+                    onChanged: (bool? value) {
+                      themeChange.darkTheme = value??false;
+                    }),
+                const Text(" Change your theme")
+              ],
+            ),
+
             ElevatedButton(
               onPressed:(){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SearchPage()));
@@ -164,6 +182,12 @@ class _AllPackagesListState extends State<AllPackagesList> {
               },
               style: style,
               child:const Text("Video Play",),
+            ),    ElevatedButton(
+              onPressed:(){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const AudioPlay()));
+              },
+              style: style,
+              child:const Text("AudioPlay",),
             ),
 
           ],
