@@ -1,11 +1,16 @@
 import 'dart:async';
 import 'dart:math';
+import 'dart:typed_data';
+import 'dart:ui' as ui;
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:january_2023/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'animations/curved_animations.dart';
 import 'app_config.dart';
 import 'extra/audio_play.dart';
 import 'extra/blink_text.dart';
@@ -31,6 +36,7 @@ class _AllPackagesListState extends State<AllPackagesList> {
   late StreamSubscription subscription;
   bool isDeviceConnected = false;
   bool isAlertSet = false;
+  final GlobalKey _key = GlobalKey();
 
   @override
   void initState() {
@@ -47,6 +53,22 @@ class _AllPackagesListState extends State<AllPackagesList> {
     print(rectangle.center);
   }
 
+  void _captureScreenShot() async{
+    //get paint bound of your app screen or the widget which is wrapped with RepaintBoundary.
+    RenderRepaintBoundary bound = _key.currentContext?.findRenderObject() as RenderRepaintBoundary;
+    if(bound.debugNeedsPaint){
+      Timer(Duration(seconds: 1),()=>_captureScreenShot());
+      return null;
+    }
+    ui.Image image = await bound.toImage();
+    ByteData? byteData = await image.toByteData(format: ui.ImageByteFormat.png);
+    // this will save image screenshot in gallery
+    if(byteData != null ){
+      Uint8List pngBytes = byteData.buffer.asUint8List();
+      final resultsave = await ImageGallerySaver.saveImage(Uint8List.fromList(pngBytes),quality: 90,name: 'screenshot-${DateTime.now()}');
+      print(resultsave);
+    }
+  }
 
   getConnectivity() =>
       subscription = Connectivity().onConnectivityChanged.listen(
@@ -102,96 +124,116 @@ class _AllPackagesListState extends State<AllPackagesList> {
   Widget build(BuildContext context) {
     final themeChange = Provider.of<DarkThemeProvider>(context);
 
-    return Scaffold(
-      body: SizedBox(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: Column(
-          //  mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            const SizedBox(height: 50,),
-            Text('Flutter Demo Home Page ${widget.appConfig?.appName}'),
+    return RepaintBoundary(
+      key: _key,
+      child: Scaffold(
+        body: SizedBox(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            //  mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              const SizedBox(height: 50,),
+              Text('Flutter Demo Home Page ${widget.appConfig?.appName}'),
 
-                Checkbox(
-                    value: themeChange.darkTheme,
-                    onChanged: (bool? value) {
-                      themeChange.darkTheme = value??false;
-                    }),
-                const Text(" Change your theme")
-              ],
-            ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
 
-            ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SearchPage()));
-              },
-              style:style,
-              child:const Text("Search",),
-            ) ,
-            ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BlinkText()));
-              },
-              style: style,
-              child:const Text("Blink Text",),
-            ),
+                  Checkbox(
+                      value: themeChange.darkTheme,
+                      onChanged: (bool? value) {
+                        themeChange.darkTheme = value??false;
+                      }),
+                  const Text(" Change your theme")
+                ],
+              ),
 
-            ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RenderHTML()));
-              },
-              style: style,
-              child:const Text("Render HTML",),
-            ),
-            ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CallbackFun()));
-              },
-              style: style,
-              child:const Text("CallBack",),
-            ),
-            ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RemoteConfigDemo()));
-              },
-              style: style,
-              child:const Text("F/B - remote Config",),
-            ),
-            ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FBStore()));
-              },
-              style: style,
-              child:const Text("F/B - cloud fireStore",),
-            ),
-            ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PostsPage()));
-              },
-              style: style,
-              child:const Text("F/B - cloud fireStore-nested",),
-            ),
-            ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PlayingVideo()));
-              },
-              style: style,
-              child:const Text("Video Play",),
-            ),    ElevatedButton(
-              onPressed:(){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const AudioPlay()));
-              },
-              style: style,
-              child:const Text("AudioPlay",),
-            ),
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SearchPage()));
+                },
+                style:style,
+                child:const Text("Search",),
+              ) ,
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BlinkText()));
+                },
+                style: style,
+                child:const Text("Blink Text",),
+              ),
 
-          ],
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RenderHTML()));
+                },
+                style: style,
+                child:const Text("Render HTML",),
+              ),
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CallbackFun()));
+                },
+                style: style,
+                child:const Text("CallBack",),
+              ),
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RemoteConfigDemo()));
+                },
+                style: style,
+                child:const Text("F/B - remote Config",),
+              ),
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FBStore()));
+                },
+                style: style,
+                child:const Text("F/B - cloud fireStore",),
+              ),
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PostsPage()));
+                },
+                style: style,
+                child:const Text("F/B - cloud fireStore-nested",),
+              ),
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PlayingVideo()));
+                },
+                style: style,
+                child:const Text("Video Play",),
+              ),
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const AudioPlay()));
+                },
+                style: style,
+                child:const Text("AudioPlay",),
+              ),
+              ElevatedButton(
+                onPressed:(){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const CurvedAnimationss()));
+                },
+                style: style,
+                child:const Text("CurvedAnimationss",),
+              ),
+
+            ],
+          ),
         ),
+        floatingActionButton:FloatingActionButton(
+
+          onPressed: () {
+            _captureScreenShot();
+          },
+          child: Text("Click"),
+
+        ) ,
       ),
     );
   }

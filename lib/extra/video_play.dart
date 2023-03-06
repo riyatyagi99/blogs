@@ -1,9 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
 
@@ -32,6 +30,7 @@ class _PlayingVideoState extends State<PlayingVideo> {
 
     initializeVideoPlayerFuture = _controller.initialize();
     debugPrint("Is it there ${initializeVideoPlayerFuture}");
+   print("Is it there ${initializeVideoPlayerFuture}");
 
     setState(() {
 
@@ -128,8 +127,8 @@ class _PlayingVideoState extends State<PlayingVideo> {
               print("Linkify link = ${link.url}");
             },
             text: "Linkify click -  https://www.youtube.com/channel/UCwxiHP2Ryd-aR0SWKjYguxw",
-            style: TextStyle(color: Colors.blue),
-            linkStyle: TextStyle(color: Colors.green),
+            style: const TextStyle(color: Colors.blue),
+            linkStyle: const TextStyle(color: Colors.green),
           ),
         ],
       ),

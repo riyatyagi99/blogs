@@ -92,7 +92,6 @@ class _AudioPlayState extends State<AudioPlay> {
   }
 
   String formatTime(Duration value){
-
     String twoDigits(int n)=>n.toString().padLeft(2,'0');
     final hours=twoDigits(value.inHours);
     final min=twoDigits(value.inMinutes.remainder(60));

@@ -57,6 +57,10 @@ dependencies:
   flutter_colorpicker: ^0.4.0
   audioplayers: ^3.0.1
   just_audio: ^0.9.31
+  the_apple_sign_in:
+  rive: ^0.7.0
+  image_gallery_saver:
+
 
 dev_dependencies:
   flutter_test:
@@ -84,6 +88,7 @@ flutter:
   assets:
      - assets/images/
      - assets/audio/
+     - assets/Rive/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
