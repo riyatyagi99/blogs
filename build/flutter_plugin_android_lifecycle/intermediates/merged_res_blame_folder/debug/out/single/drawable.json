@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/mobcoder-235/Documents/blogs/blog/build/flutter_plugin_android_lifecycle/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/mobcoder-235/.gradle/caches/transforms-3/f6423270255905883576524a9a99118c/transformed/core-1.6.0/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/mobcoder-235/Documents/blogs/blog/build/flutter_plugin_android_lifecycle/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/mobcoder-235/.gradle/caches/transforms-3/f6423270255905883576524a9a99118c/transformed/core-1.6.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/mobcoder-235/Documents/blogs/blog/build/flutter_plugin_android_lifecycle/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/mobcoder-235/.gradle/caches/transforms-3/f6423270255905883576524a9a99118c/transformed/core-1.6.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/mobcoder-235/Documents/blogs/blog/build/flutter_plugin_android_lifecycle/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/Users/mobcoder-235/.gradle/caches/transforms-3/f6423270255905883576524a9a99118c/transformed/core-1.6.0/res/drawable/notification_bg.xml"
+    }
+]

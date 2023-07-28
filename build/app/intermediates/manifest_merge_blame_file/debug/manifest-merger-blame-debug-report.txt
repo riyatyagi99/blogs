@@ -1,0 +1,257 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.blog"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/mobcoder-235/Documents/blogs/blog/android/app/src/debug/AndroidManifest.xml:6:5-66
+14-->/Users/mobcoder-235/Documents/blogs/blog/android/app/src/debug/AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-65
+15-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-62
+16
+17    <uses-feature android:name="android.hardware.camera" />
+17-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-60
+17-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:11:19-57
+18
+19    <uses-permission android:name="android.permission.FLASHLIGHT" />
+19-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-69
+19-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-66
+20    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+20-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+20-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:7:22-78
+21    <uses-permission android:name="android.permission.VIBRATE" />
+21-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-66
+21-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:8:22-63
+22    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+22-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-81
+22-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-78
+23    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+23-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-79
+23-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-76
+24    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+24-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-77
+24-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:11:22-74
+25
+26    <uses-feature
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+27        android:name="android.hardware.camera.front"
+27-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+28        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+29    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+30    <uses-feature
+30-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
+31        android:name="android.hardware.camera.autofocus"
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
+32        android:required="false" />
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
+33    <uses-feature
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+34        android:name="android.hardware.camera.flash"
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+35        android:required="false" />
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+36    <uses-feature
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+37        android:name="android.hardware.screen.landscape"
+37-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+38        android:required="false" />
+38-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+39    <uses-feature
+39-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+40        android:name="android.hardware.wifi"
+40-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+41        android:required="false" />
+41-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+42
+43    <application
+44        android:name="android.app.Application"
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.7.0] /Users/mobcoder-235/.gradle/caches/transforms-3/9cc10e48071a47bb61644783dce6ff67/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+46        android:debuggable="true"
+47        android:icon="@mipmap/ic_launcher"
+48        android:label="blog"
+49        android:largeHeap="true"
+49-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-33
+50        android:theme="@style/Theme.AppCompat.NoActionBar" >
+50-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-59
+51        <activity
+52            android:name="com.example.blog.MainActivity"
+53            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+54            android:exported="true"
+55            android:hardwareAccelerated="true"
+56            android:launchMode="singleTop"
+57            android:theme="@style/LaunchTheme"
+58            android:windowSoftInputMode="adjustResize" >
+59
+60            <!--
+61                 Specifies an Android theme to apply to this Activity as soon as
+62                 the Android process has started. This theme is visible to the user
+63                 while the Flutter UI initializes. After that, this theme continues
+64                 to determine the Window background behind the Flutter UI.
+65            -->
+66            <meta-data
+67                android:name="io.flutter.embedding.android.NormalTheme"
+68                android:resource="@style/NormalTheme" />
+69
+70            <intent-filter>
+71                <action android:name="android.intent.action.MAIN" />
+72
+73                <category android:name="android.intent.category.LAUNCHER" />
+74            </intent-filter>
+75
+76            <meta-data
+77                android:name="flutter_deeplinking_enabled"
+78                android:value="true" />
+79
+80            <intent-filter>
+81                <action android:name="android.intent.action.VIEW" />
+82
+83                <category android:name="android.intent.category.DEFAULT" />
+84                <category android:name="android.intent.category.BROWSABLE" />
+85                <!--
+86                Accepts URIs that begin with YOUR_SCHEME://YOUR_HOST
+87                  <data android:scheme="https" android:host="github.com/riyatyagi99" />
+88                <data android:scheme="http" android:host="github.com/riyatyagi99" />
+89                -->
+90                <data
+91                    android:host="deeplink.example"
+92                    android:scheme="blog" />
+93            </intent-filter>
+94        </activity>
+95        <!--
+96             Don't delete the meta-data below.
+97             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+98        -->
+99        <meta-data
+100            android:name="flutterEmbedding"
+101            android:value="2" />
+102
+103        <activity android:name="com.amolg.flutterbarcodescanner.BarcodeCaptureActivity" />
+103-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-91
+103-->[:flutter_barcode_scanner] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_barcode_scanner/intermediates/library_manifest/debug/AndroidManifest.xml:18:19-88
+104
+105        <receiver
+105-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:14:9-16:40
+106            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+106-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-97
+107            android:exported="false" />
+107-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-37
+108        <receiver
+108-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:17:9-26:20
+109            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+109-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-101
+110            android:exported="false" >
+110-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-37
+111            <intent-filter>
+111-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-25:29
+112                <action android:name="android.intent.action.BOOT_COMPLETED" />
+112-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-79
+112-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:21:25-76
+113                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+113-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:22:17-84
+113-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:22:25-81
+114                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+114-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:23:17-82
+114-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:23:25-79
+115                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+115-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:24:17-82
+115-->[:flutter_local_notifications] /Users/mobcoder-235/Documents/blogs/blog/build/flutter_local_notifications/intermediates/library_manifest/debug/AndroidManifest.xml:24:25-79
+116            </intent-filter>
+117        </receiver>
+118
+119        <provider
+119-->[:share] /Users/mobcoder-235/Documents/blogs/blog/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
+120            android:name="io.flutter.plugins.share.ShareFileProvider"
+120-->[:share] /Users/mobcoder-235/Documents/blogs/blog/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-70
+121            android:authorities="com.example.blog.flutter.share_provider"
+121-->[:share] /Users/mobcoder-235/Documents/blogs/blog/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
+122            android:exported="false"
+122-->[:share] /Users/mobcoder-235/Documents/blogs/blog/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
+123            android:grantUriPermissions="true" >
+123-->[:share] /Users/mobcoder-235/Documents/blogs/blog/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+124            <meta-data
+124-->[:share] /Users/mobcoder-235/Documents/blogs/blog/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:68
+125                android:name="android.support.FILE_PROVIDER_PATHS"
+125-->[:share] /Users/mobcoder-235/Documents/blogs/blog/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
+126                android:resource="@xml/flutter_share_file_paths" />
+126-->[:share] /Users/mobcoder-235/Documents/blogs/blog/build/share/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-65
+127        </provider>
+128
+129        <uses-library
+129-->[androidx.window:window:1.0.0-beta04] /Users/mobcoder-235/.gradle/caches/transforms-3/3913f37d3ca5d5e203a0e092b1d99efa/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+130            android:name="androidx.window.extensions"
+130-->[androidx.window:window:1.0.0-beta04] /Users/mobcoder-235/.gradle/caches/transforms-3/3913f37d3ca5d5e203a0e092b1d99efa/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+131            android:required="false" />
+131-->[androidx.window:window:1.0.0-beta04] /Users/mobcoder-235/.gradle/caches/transforms-3/3913f37d3ca5d5e203a0e092b1d99efa/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+132        <uses-library
+132-->[androidx.window:window:1.0.0-beta04] /Users/mobcoder-235/.gradle/caches/transforms-3/3913f37d3ca5d5e203a0e092b1d99efa/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+133            android:name="androidx.window.sidecar"
+133-->[androidx.window:window:1.0.0-beta04] /Users/mobcoder-235/.gradle/caches/transforms-3/3913f37d3ca5d5e203a0e092b1d99efa/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+134            android:required="false" />
+134-->[androidx.window:window:1.0.0-beta04] /Users/mobcoder-235/.gradle/caches/transforms-3/3913f37d3ca5d5e203a0e092b1d99efa/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+135
+136        <activity
+136-->[com.google.android.gms:play-services-base:17.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/fc9c8c8493afc8c97a5600453eba0706/transformed/jetified-play-services-base-17.4.0/AndroidManifest.xml:23:9-26:75
+137            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+137-->[com.google.android.gms:play-services-base:17.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/fc9c8c8493afc8c97a5600453eba0706/transformed/jetified-play-services-base-17.4.0/AndroidManifest.xml:24:13-79
+138            android:exported="false"
+138-->[com.google.android.gms:play-services-base:17.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/fc9c8c8493afc8c97a5600453eba0706/transformed/jetified-play-services-base-17.4.0/AndroidManifest.xml:25:13-37
+139            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+139-->[com.google.android.gms:play-services-base:17.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/fc9c8c8493afc8c97a5600453eba0706/transformed/jetified-play-services-base-17.4.0/AndroidManifest.xml:26:13-72
+140
+141        <meta-data
+141-->[com.google.android.gms:play-services-basement:17.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/dad41986dc313ba20f42b96abe4a0604/transformed/jetified-play-services-basement-17.4.0/AndroidManifest.xml:23:9-25:69
+142            android:name="com.google.android.gms.version"
+142-->[com.google.android.gms:play-services-basement:17.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/dad41986dc313ba20f42b96abe4a0604/transformed/jetified-play-services-basement-17.4.0/AndroidManifest.xml:24:13-58
+143            android:value="@integer/google_play_services_version" />
+143-->[com.google.android.gms:play-services-basement:17.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/dad41986dc313ba20f42b96abe4a0604/transformed/jetified-play-services-basement-17.4.0/AndroidManifest.xml:25:13-66
+144
+145        <provider
+145-->[androidx.emoji2:emoji2:1.0.0] /Users/mobcoder-235/.gradle/caches/transforms-3/c50b6c44383634333298d3fc00b5dc55/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+146            android:name="androidx.startup.InitializationProvider"
+146-->[androidx.emoji2:emoji2:1.0.0] /Users/mobcoder-235/.gradle/caches/transforms-3/c50b6c44383634333298d3fc00b5dc55/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+147            android:authorities="com.example.blog.androidx-startup"
+147-->[androidx.emoji2:emoji2:1.0.0] /Users/mobcoder-235/.gradle/caches/transforms-3/c50b6c44383634333298d3fc00b5dc55/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+148            android:exported="false" >
+148-->[androidx.emoji2:emoji2:1.0.0] /Users/mobcoder-235/.gradle/caches/transforms-3/c50b6c44383634333298d3fc00b5dc55/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+149            <meta-data
+149-->[androidx.emoji2:emoji2:1.0.0] /Users/mobcoder-235/.gradle/caches/transforms-3/c50b6c44383634333298d3fc00b5dc55/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+150                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+150-->[androidx.emoji2:emoji2:1.0.0] /Users/mobcoder-235/.gradle/caches/transforms-3/c50b6c44383634333298d3fc00b5dc55/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+151                android:value="androidx.startup" />
+151-->[androidx.emoji2:emoji2:1.0.0] /Users/mobcoder-235/.gradle/caches/transforms-3/c50b6c44383634333298d3fc00b5dc55/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+152            <meta-data
+152-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/db60695c269b6740d4b80d5e2d8fa8df/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+153                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+153-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/db60695c269b6740d4b80d5e2d8fa8df/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+154                android:value="androidx.startup" />
+154-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/mobcoder-235/.gradle/caches/transforms-3/db60695c269b6740d4b80d5e2d8fa8df/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+155        </provider>
+156
+157        <activity
+157-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+158            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+158-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+159            android:clearTaskOnLaunch="true"
+159-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+160            android:screenOrientation="sensorLandscape"
+160-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+161            android:stateNotNeeded="true"
+161-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+162            android:theme="@style/zxing_CaptureTheme"
+162-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+163            android:windowSoftInputMode="stateAlwaysHidden" />
+163-->[com.journeyapps:zxing-android-embedded:4.3.0] /Users/mobcoder-235/.gradle/caches/transforms-3/0317d2c46a757b6f05b937826b1a8612/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+164    </application>
+165
+166</manifest>

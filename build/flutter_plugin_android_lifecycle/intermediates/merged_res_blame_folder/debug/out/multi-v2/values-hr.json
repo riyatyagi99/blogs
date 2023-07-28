@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/mobcoder-235/Documents/blogs/blog/build/flutter_plugin_android_lifecycle/intermediates/res/merged/debug/values-hr/values-hr.xml",
+            "map": [
+                {
+                    "source": "/Users/mobcoder-235/.gradle/caches/transforms-3/f6423270255905883576524a9a99118c/transformed/core-1.6.0/res/values-hr/values-hr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/mobcoder-235/Documents/blogs/blog/build/flutter_plugin_android_lifecycle/intermediates/incremental/mergeDebugResources/merged.dir/values-hr/values-hr.xml",
+            "map": [
+                {
+                    "source": "/Users/mobcoder-235/.gradle/caches/transforms-3/f6423270255905883576524a9a99118c/transformed/core-1.6.0/res/values-hr/values-hr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
