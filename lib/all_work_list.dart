@@ -57,7 +57,7 @@ class _AllPackagesListState extends State<AllPackagesList> {
     //get paint bound of your app screen or the widget which is wrapped with RepaintBoundary.
     RenderRepaintBoundary bound = _key.currentContext?.findRenderObject() as RenderRepaintBoundary;
     if(bound.debugNeedsPaint){
-      Timer(Duration(seconds: 1),()=>_captureScreenShot());
+      Timer(const Duration(seconds: 1),()=>_captureScreenShot());
       return null;
     }
     ui.Image image = await bound.toImage();
@@ -130,100 +130,103 @@ class _AllPackagesListState extends State<AllPackagesList> {
         body: SizedBox(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          child: Column(
-            //  mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
+          child: SingleChildScrollView(
+            child: Column(
+              //  mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
 
-              const SizedBox(height: 50,),
-              Text('Flutter Demo Home Page ${widget.appConfig?.appName}'),
+                const SizedBox(height: 50,),
+                Text('Flutter Demo Home Page ${widget.appConfig?.appName}'),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
 
-                  Checkbox(
-                      value: themeChange.darkTheme,
-                      onChanged: (bool? value) {
-                        themeChange.darkTheme = value??false;
-                      }),
-                  const Text(" Change your theme")
-                ],
-              ),
+                    Checkbox(
+                        value: themeChange.darkTheme,
+                        onChanged: (bool? value) {
+                          themeChange.darkTheme = value??false;
+                        }),
+                    const Text(" Change your theme")
+                  ],
+                ),
 
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SearchPage()));
-                },
-                style:style,
-                child:const Text("Search",),
-              ) ,
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BlinkText()));
-                },
-                style: style,
-                child:const Text("Blink Text",),
-              ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SearchPage()));
+                  },
+                  style:style,
+                  child:const Text("Search",),
+                ) ,
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BlinkText()));
+                  },
+                  style: style,
+                  child:const Text("Blink Text",),
+                ),
 
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RenderHTML()));
-                },
-                style: style,
-                child:const Text("Render HTML",),
-              ),
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CallbackFun()));
-                },
-                style: style,
-                child:const Text("CallBack",),
-              ),
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RemoteConfigDemo()));
-                },
-                style: style,
-                child:const Text("F/B - remote Config",),
-              ),
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FBStore()));
-                },
-                style: style,
-                child:const Text("F/B - cloud fireStore",),
-              ),
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PostsPage()));
-                },
-                style: style,
-                child:const Text("F/B - cloud fireStore-nested",),
-              ),
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PlayingVideo()));
-                },
-                style: style,
-                child:const Text("Video Play",),
-              ),
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const AudioPlay()));
-                },
-                style: style,
-                child:const Text("AudioPlay",),
-              ),
-              ElevatedButton(
-                onPressed:(){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const CurvedAnimationss()));
-                },
-                style: style,
-                child:const Text("CurvedAnimationss",),
-              ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RenderHTML()));
+                  },
+                  style: style,
+                  child:const Text("Render HTML",),
+                ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CallbackFun()));
+                  },
+                  style: style,
+                  child:const Text("CallBack",),
+                ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RemoteConfigDemo()));
+                  },
+                  style: style,
+                  child:const Text("F/B - remote Config",),
+                ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>FBStore()));
+                  },
+                  style: style,
+                  child:const Text("F/B - cloud fireStore",),
+                ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PostsPage()));
+                  },
+                  style: style,
+                  child:const Text("F/B - cloud fireStore-nested",),
+                ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const PlayingVideo()));
+                  },
+                  style: style,
+                  child:const Text("Video Play",),
+                ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const AudioPlay()));
+                  },
+                  style: style,
+                  child:const Text("AudioPlay",),
+                ),
+                ElevatedButton(
+                  onPressed:(){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const CurvedAnimationss()));
+                  },
+                  style: style,
+                  child:const Text("CurvedAnimationss",),
+                ),
+                Image.asset('assets/images/dummyProfilePic.png')
 
-            ],
+              ],
+            ),
           ),
         ),
         floatingActionButton:FloatingActionButton(
